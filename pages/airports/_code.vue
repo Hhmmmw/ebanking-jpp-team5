@@ -7,15 +7,26 @@
 
 <script>
 import airports from '~/data/airports.js'
-
 export default {
-  name: 'AirportDetailPage',
-  asyncData ({ route }) {
-    const airport = airports.filter(airport => airport.abbreviation === route.params.code.toUpperCase())[0]
+    asyncData (context) {
+      const airport = airports.filter(airport => airport.abbreviation === context.route.params.code.toUpperCase())[0]
 
-    return {
-      airport
+      return {
+        airport
+      }
+    },
+    layout: 'AirportDetail',
+    head() {
+      return {
+      title: `${this.airport.name} Information | Aiport App`,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: `Detailed information about the ${this.airport.name} (${this.airport.abbreviation}) airport.`
+          }
+        ]
+      }
     }
   }
-}
 </script>
