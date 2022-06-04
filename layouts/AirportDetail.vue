@@ -45,7 +45,7 @@ export default {
       airport
     }
   },
-  layout: 'AirportDetail'
+//   layout: 'AirportDetail'
 }
 </script>
 <!-- 

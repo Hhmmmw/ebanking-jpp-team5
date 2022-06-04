@@ -15,7 +15,7 @@ export default {
         airport
       }
     },
-    layout: 'AirportDetail',
+    // layout: 'AirportDetail',
     head() {
       return {
       title: `${this.airport.name} Information | Aiport App`,
