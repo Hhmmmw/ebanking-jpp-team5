@@ -1,12 +1,13 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
-  {
-    "compilerOptions": {
-      "types": [
-        "@nuxt/types",
-        "@nuxtjs/axios"
-      ]
-    }
-  }
+  "extends": "./.nuxt/tsconfig.json"
+  // ,
+  // {
+  //   "compilerOptions": {
+  //     "types": [
+  //       "@nuxt/types",
+  //       "@nuxtjs/axios"
+  //     ]
+  //   }
+  // }
 }
