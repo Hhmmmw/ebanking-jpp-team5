@@ -6,10 +6,31 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
-  "devDependencies": {
-    "nuxt": "3.0.0-rc.3"
-  },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6"
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.13.6",
+    "bootstrap-vue": "^2.22.0",
+    "lodash.assign": "^4.2.0",
+    "lodash.merge": "^4.6.2",
+    "nuxt": "^2.13.3",
+    "nuxt-i18n": "^6.28.1",
+    "vee-validate": "^4.5.11",
+    "velocity-animate": "^1.5.2",
+    "vue-moment": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "coffee-loader": "^4.0.0",
+    "coffeescript": "^2.7.0",
+    "eslint": "^8.17.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-vue": "^9.1.0",
+    "json-server": "^0.17.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-sass": "^7.0.1",
+    "postcss-preset-env": "^7.7.1",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sass-loader": "^13.0.0"
   }
 }
