@@ -1,4 +1,9 @@
 export default {
+
+  // server middleware
+  serverMiddleware:
+    process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js'],
+
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
 
