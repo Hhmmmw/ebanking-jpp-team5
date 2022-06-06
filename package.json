@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/vercel-builder": "^0.22.1",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
