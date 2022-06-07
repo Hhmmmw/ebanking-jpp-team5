@@ -45,7 +45,19 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
+    'nuxt-logger'
   ],
+  // auth
+  auth: {
+    // Options
+  },
+  /// logger
+  logger: {
+    isEnabled: true, // true or false, defaults to true
+    logLevel: 'debug' // debug, info, warn or error, defaults to debug
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

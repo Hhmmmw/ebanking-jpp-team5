@@ -1,0 +1,14 @@
+{
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "[editorconfig]": {
+    "editor.autoIndent": "advanced",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  },
+  "editor.codeActionsOnSave": {
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  }
+}
