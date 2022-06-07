@@ -1,19 +1,19 @@
-const logOptions = {
-  // optional : defaults to true if not specified
-  isEnabled: true,
-  // required ['debug', 'info', 'warn', 'error', 'fatal']
-  logLevel: 'debug',
-  // optional : defaults to false if not specified
-  stringifyArguments: false,
-  // optional : defaults to false if not specified
-  showLogLevel: false,
-  // optional : defaults to false if not specified
-  showMethodName: false,
-  // optional : defaults to '|' if not specified
-  separator: '|',
-  // optional : defaults to false if not specified
-  showConsoleColors: false
-}
+// const logOptions = {
+//   // optional : defaults to true if not specified
+//   isEnabled: true,
+//   // required ['debug', 'info', 'warn', 'error', 'fatal']
+//   logLevel: 'debug',
+//   // optional : defaults to false if not specified
+//   stringifyArguments: false,
+//   // optional : defaults to false if not specified
+//   showLogLevel: false,
+//   // optional : defaults to false if not specified
+//   showMethodName: false,
+//   // optional : defaults to '|' if not specified
+//   separator: '|',
+//   // optional : defaults to false if not specified
+//   showConsoleColors: false
+// }
 
 export default {
 
@@ -68,15 +68,15 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
-    ['nuxt-log', logOptions]
+    '@nuxtjs/auth-next'
+    // ['nuxt-log', logOptions]
 
     // 'nuxt-logger'
-  ],
+  ]
   // auth
-  auth: {
-    // Options
-  },
+  // auth: {
+  // Options
+  // },
   /// logger
   // logger: {
   //   isEnabled: true, // true or false, defaults to true
@@ -84,6 +84,6 @@ export default {
   // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  // build: {
+  // }
 }

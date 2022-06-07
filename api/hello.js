@@ -7,8 +7,8 @@ app.use(bodyParser.json())
 // It is important that the full path is specified here
 app.post('/api/hello', function (req, res) {
   const { info } = req.body
-  // console.log(info)
-  app.$log.info(info)
+  console.log(info)
+  // app.$log.info(info)
   res
     .status(200)
     .json({ info })

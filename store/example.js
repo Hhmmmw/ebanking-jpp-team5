@@ -34,5 +34,5 @@ const a = new Store({
   }
 })
 
-// console.log(a)
-app.$log.info(a)
+console.log(a)
+// app.$log.info(a)
