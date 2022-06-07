@@ -1,7 +1,7 @@
 export default {
 
   // server middleware
-  serverMiddleware:[
+  serverMiddleware: [
     process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js'],
     { path: '/log', handler: '~/api/log.js' }
   ],
@@ -34,8 +34,8 @@ export default {
   plugins: [
     { src: '~/plugins/helpers' },
     // { src: '~/plugins/myPlugin' },
-    '~/plugins/axios.js',
-    '~/plugins/logger.js'
+    { src: '~/plugins/axios.js' },
+    { src: '~/plugins/logger.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

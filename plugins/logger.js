@@ -29,5 +29,5 @@ export default (context, inject) => {
   // Inject $hello(msg) in Vue, context and store.
   inject('log', logger)
   // For Nuxt <= 2.12, also add
-  // context.$log = logger
+  context.$log = logger
 }

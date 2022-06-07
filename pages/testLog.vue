@@ -4,10 +4,10 @@
 <script>
 export default {
   name: 'LoggingTest',
-  asyncData({ $log }) {
+  asyncData ({ $log }) {
     $log.info('accessing the test.vue page')
   },
-  mounted() {
+  mounted () {
     this.$log.warn('mounted warning')
   }
 }
