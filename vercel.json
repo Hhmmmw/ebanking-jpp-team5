@@ -1,8 +1,7 @@
 {
     "version": 2,
     "env": {
-        "MY_VARIABLE": "true",
-        "NODE_ENV": "production"
+        "MY_VARIABLE": "true"
     },
     "routes": [
         {

@@ -18,8 +18,8 @@
 export default {
 
   // server middleware
-  serverMiddleware:
-    process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js'],
+  // serverMiddleware:
+  // process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js'],
   // { path: '/log', handler: '~/api/log.js' }
 
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -48,9 +48,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/helpers' },
+    // { src: '~/plugins/helpers' },
     // { src: '~/plugins/myPlugin' },
-    { src: '~/plugins/axios.js' }
+    // { src: '~/plugins/axios.js' }
     // { src: '~/plugins/logger.js' }
   ],
 
@@ -67,8 +67,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    // '@nuxtjs/axios',
+    // '@nuxtjs/auth-next'
     // ['nuxt-log', logOptions]
 
     // 'nuxt-logger'
