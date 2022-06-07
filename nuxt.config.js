@@ -18,10 +18,9 @@ const logOptions = {
 export default {
 
   // server middleware
-  serverMiddleware: [
-    process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js']
-    // { path: '/log', handler: '~/api/log.js' }
-  ],
+  serverMiddleware:
+    process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js'],
+  // { path: '/log', handler: '~/api/log.js' }
 
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,

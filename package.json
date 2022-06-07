@@ -2,6 +2,11 @@
   "name": "ebanking",
   "version": "1.0.0",
   "private": true,
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
