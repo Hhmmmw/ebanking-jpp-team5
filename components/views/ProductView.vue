@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div v-if="product" id="product">
     <SwPluginSlot name="product-page-details-before" :slot-context="product" />
     <SwGoBackArrow class="product-page-back" />
@@ -156,4 +156,4 @@ export default {
   top: 1.5rem;
   z-index: 4;
 }
-</style>
+</style> -->
