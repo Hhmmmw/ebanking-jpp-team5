@@ -1,9 +1,26 @@
+const logOptions = {
+  // optional : defaults to true if not specified
+  isEnabled: true,
+  // required ['debug', 'info', 'warn', 'error', 'fatal']
+  logLevel: 'debug',
+  // optional : defaults to false if not specified
+  stringifyArguments: false,
+  // optional : defaults to false if not specified
+  showLogLevel: false,
+  // optional : defaults to false if not specified
+  showMethodName: false,
+  // optional : defaults to '|' if not specified
+  separator: '|',
+  // optional : defaults to false if not specified
+  showConsoleColors: false
+}
+
 export default {
 
   // server middleware
   serverMiddleware: [
-    process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js'],
-    { path: '/log', handler: '~/api/log.js' }
+    process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js']
+    // { path: '/log', handler: '~/api/log.js' }
   ],
 
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -34,8 +51,8 @@ export default {
   plugins: [
     { src: '~/plugins/helpers' },
     // { src: '~/plugins/myPlugin' },
-    { src: '~/plugins/axios.js' },
-    { src: '~/plugins/logger.js' }
+    { src: '~/plugins/axios.js' }
+    // { src: '~/plugins/logger.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,17 +70,19 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
-    'nuxt-logger'
+    ['nuxt-log', logOptions]
+
+    // 'nuxt-logger'
   ],
   // auth
   auth: {
     // Options
   },
   /// logger
-  logger: {
-    isEnabled: true, // true or false, defaults to true
-    logLevel: 'debug' // debug, info, warn or error, defaults to debug
-  },
+  // logger: {
+  //   isEnabled: true, // true or false, defaults to true
+  //   logLevel: 'debug' // debug, info, warn or error, defaults to debug
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

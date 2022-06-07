@@ -1,4 +1,5 @@
 import { Store } from 'vuex'
+import app from '~/api/hello'
 
 const a = new Store({
   state: () => ({
@@ -34,4 +35,4 @@ const a = new Store({
 })
 
 // console.log(a)
-this.$log.debug(a)
+app.$log.info(a)

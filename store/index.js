@@ -1,7 +1,3 @@
-// import myPlugin from 'myPlugin'
-
-// export const plugins = [m/yPlugin]
-
 export const state = () => ({
   counter: 0
 })
