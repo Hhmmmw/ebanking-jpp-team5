@@ -4,5 +4,8 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"terminal.explorerKind": "external",
+		"terminal.integrated.bellDuration": 500
+	}
 }

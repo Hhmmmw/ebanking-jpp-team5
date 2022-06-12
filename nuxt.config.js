@@ -1,3 +1,10 @@
+// import fs from 'fs'
+// import webpack from 'webpack'
+
+// const fs = __non_webpack_require__("fs")
+
+// const filesystem = require("fs")
+
 // const logOptions = {
 //   // optional : defaults to true if not specified
 //   isEnabled: true,
@@ -15,7 +22,25 @@
 //   showConsoleColors: false
 // }
 
-export default {
+const config = {
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true
+    }
+  },
+  dev: process.env.NODE_ENV !== 'production',
+  // dir: new fs.Dir('../'),
+  node: {
+    fs: 'empty'
+  },
+  serverMiddleware: {
+  '/api': '~/api'
+  },
+  axios: {
+    baseURL: 'http://example.com',
+    browserBaseURL: 'http://localhost:4001'
+  },
 
   // server middleware
   // serverMiddleware:
@@ -50,7 +75,7 @@ export default {
   plugins: [
     // { src: '~/plugins/helpers' },
     // { src: '~/plugins/myPlugin' },
-    // { src: '~/plugins/axios.js' }
+    { src: '~/plugins/axios.js' }
     // { src: '~/plugins/logger.js' }
   ],
 
@@ -63,16 +88,17 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss'
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // '@nuxtjs/axios',
+    '@nuxtjs/axios'
     // '@nuxtjs/auth-next'
     // ['nuxt-log', logOptions]
 
     // 'nuxt-logger'
-  ]
+  ],
   // auth
   // auth: {
   // Options
@@ -84,6 +110,32 @@ export default {
   // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  // build: {
-  // }
+  build: {
+    target: 'node',
+    node: {
+      fs: 'empty'
+    },
+    plugins: [
+      // new webpack.ProvidePlugin({
+      //   // global modules
+      //   // $: 'jquery',
+      //   // _: 'lodash'
+      //   target: 'node',
+      //   node: {
+      //     fs: 'empty'
+      //   }
+      // })
+    ]
+  }
 }
+
+const logger = (title, array, open = [1, 1, 1]) => {
+  if (open[0] === 1) { console.group(title) }
+  if (open[1] === 1) {
+    array.forEach((e) => {
+      console.info(title, e)
+    })
+  }
+  if (open[2] === 1) { console.groupEnd() }
+}
+module.exports = { config, logger }

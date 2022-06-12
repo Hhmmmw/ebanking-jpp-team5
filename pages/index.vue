@@ -1,16 +1,21 @@
 <template>
-  <div>
-    <Tutorial />
-    <h1>{{ post.title }}</h1>
-  </div>
+  <button @click="showMessageFromBackend">
+    Show message from backend
+  </button>
 </template>
 
 <script>
 export default {
   name: 'IndexPage',
-  asyncData: async ({ $axios, params }) => {
-    const post = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-    return { post }
+  methods: {
+    async showMessageFromBackend () {
+      try {
+        const response = await this.$axios.get('/api/test')
+        console.log(response.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
   }
 }
 </script>
