@@ -37,11 +37,6 @@ const config = {
   serverMiddleware: {
   '/api': '~/api'
   },
-  axios: {
-    baseURL: 'http://example.com',
-    browserBaseURL: 'http://localhost:4001'
-  },
-
   // server middleware
   // serverMiddleware:
   // process.env.NODE_ENV === 'production' ? [] : ['~/api/hello.js'],
@@ -75,7 +70,7 @@ const config = {
   plugins: [
     // { src: '~/plugins/helpers' },
     // { src: '~/plugins/myPlugin' },
-    { src: '~/plugins/axios.js' }
+    // { src: '~/plugins/axios.js' }
     // { src: '~/plugins/logger.js' }
   ],
 
@@ -92,6 +87,12 @@ const config = {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: 'http://localhost:4001/api',
+    }
+  },
+
   modules: [
     '@nuxtjs/axios'
     // '@nuxtjs/auth-next'
@@ -99,6 +100,11 @@ const config = {
 
     // 'nuxt-logger'
   ],
+  axios: {
+    baseURL: 'http://localhost:4001/api',
+    browserBaseURL: 'http://localhost:4001'
+  },
+
   // auth
   // auth: {
   // Options

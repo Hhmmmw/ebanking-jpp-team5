@@ -6,9 +6,13 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, default: null },
   email: { type: String, unique: true },
   password: { type: String },
-  token: { type: String },
-  activated: {type: Boolean, default: false},
-  sessionCount: {type: Number, default: 0}
-})
+  isAdmin:{type:Boolean, default:false},
+  loggedOut:{type:Boolean},
+  token: {
+    prev: { type: String },
+    curr: { type: String },
+  },
+  activated: {type: Boolean, default: true},// TODO: make it false after implementation of activate by admin
+}, { timestamps: true })
 
 module.exports = mongoose.model('user', userSchema)

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 // const { log } = require('./config/log')
-
+exports.expiresIn=60*60
 const { MONGO_URI } = process.env
 
 exports.connect = () => {
