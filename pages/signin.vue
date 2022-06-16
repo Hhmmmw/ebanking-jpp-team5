@@ -52,6 +52,7 @@
   </div>
 </template>
 <script>
+
 function l (a) {
   console.log(...a)
 }

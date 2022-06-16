@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-// const log = require('./config/log')
 
 const transactionSchema = new mongoose.Schema({
   SrcUserId: { type: String, required: true },

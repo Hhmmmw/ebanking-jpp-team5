@@ -23,7 +23,8 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="welcomeUser" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                   aria-current="page">Dashboard</a>
-
+                <a href="createAccount" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  aria-current="page">Create Account</a>
                 <!-- <a href="#"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
 
@@ -58,9 +59,7 @@
                     class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                     id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                     <span class="sr-only">Open user menu</span>
-                    <img class="h-8 w-8 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt="">
+                    <img class="h-8 w-8 rounded-full" :src="getAvatar" alt="">
                   </button>
                 </div>
 
@@ -125,6 +124,8 @@
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a href="welcomeUser" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
             aria-current="page">Dashboard</a>
+          <a href="createAccount" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+            aria-current="page">Create Account</a>
 
           <!-- <a href="#"
             class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
@@ -141,13 +142,12 @@
         <div class="pt-4 pb-3 border-t border-gray-700">
           <div class="flex items-center px-5">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 rounded-full"
-                :src="getAvatar"
-                alt="">
+              <img class="h-10 w-10 rounded-full" :src="getAvatar" alt="">
             </div>
             <div class="ml-3">
-              <div class="text-base font-medium leading-none text-white">{{getUser.firstName}} {{getUser.lastName}}</div>
-              <div class="text-sm font-medium leading-none text-gray-400">{{getUser.email}}</div>
+              <div class="text-base font-medium leading-none text-white">{{ getUser.firstName }} {{ getUser.lastName }}
+              </div>
+              <div class="text-sm font-medium leading-none text-gray-400">{{ getUser.email }}</div>
             </div>
             <button type="button"
               class="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -184,9 +184,98 @@
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <!-- Replace with your content -->
-        <div class="px-4 py-6 sm:px-0">
-          <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+        <!-- <div class="px-4 py-6 sm:px-0">
+          <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
+
+
+
+
+          </div>
+        </div> -->
+        <!-- <div
+          class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700"> -->
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  Account Number
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Status
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Balance
+                </th>
+                <!-- <th scope="col" class="px-6 py-3">
+                  Price
+                </th> -->
+                <th scope="col" class="px-6 py-3">
+                  <span class="sr-only">Edit</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                  Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                  Sliver
+                </td>
+                <td class="px-6 py-4">
+                  Laptop
+                </td>
+                <!-- <td class="px-6 py-4">
+                  $2999
+                </td> -->
+                <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                  Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                  White
+                </td>
+                <td class="px-6 py-4">
+                  Laptop PC
+                </td>
+                <!-- <td class="px-6 py-4">
+                  $1999
+                </td> -->
+                <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+              <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                  Magic Mouse 2
+                </th>
+                <td class="px-6 py-4">
+                  Black
+                </td>
+                <td class="px-6 py-4">
+                  Accessories
+                </td>
+                <!-- <td class="px-6 py-4">
+                  $99
+                </td> -->
+                <td class="px-6 py-4 text-right">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <!-- </div> -->
+
         <!-- /End replace -->
       </div>
     </main>
@@ -207,31 +296,24 @@ export default {
       if (!!this.$store.state.session.authedUser) {
         return this.$store.state.session.authedUser
       }
-      // else{
-      // this.$router.push('/signin')
-      // }
+
     },
-    getAvatar(){
-  //  return        await this.$axios.post("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80")
-// return "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-// "https://ui-avatars.com/api/?rounded=true"
-return `https://ui-avatars.com/api/?rounded=true&bold=true&name=${this.$store.state.session.authedUser.firstName}+${this.$store.state.session.authedUser.lastName}&background=random&color=random&size=128&formate=svg&uppercase=false`
-  }
+    getAvatar () {
+      return `https://ui-avatars.com/api/?rounded=true&bold=true&name=${this.$store.state.session.authedUser.firstName}+${this.$store.state.session.authedUser.lastName}&background=random&color=random&size=128&formate=svg&uppercase=false`
+    }
   },
-  methods:{
+  // methods: {
 
-  async getAvatar(){
-  //  return        await this.$axios.post("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80")
-return "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-// "https://ui-avatars.com/api/?rounded=true"
-  }
-  }
+  //   async getAvatar () {
+  //     return "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+  //   }
+  // }
 
-  ,
+  // ,
   async mounted () {
-                // this.$store.commit('session/clearAll')
+    // this.$store.commit('session/clearAll')
 
-    l(['/welcomeUser: mounted',this.$store])
+    l(['/welcomeUser: mounted', this.$store])
     if (this.$store.state.session.token) {
       l(['/welcomeUser: mounted: token is defined'])
       await this.$axios.post('/authed', { token: this.$store.state.session.token }, {
@@ -244,7 +326,7 @@ return "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.
           l(['/welcomeUser: mounted: authed', response])
           if (response.data._id) {
             this.$store.commit('session/save', { userId: response.data._id, token: response.data.token })
-            this.$store.commit('session/saveAuthedUser',response.data)
+            this.$store.commit('session/saveAuthedUser', response.data)
           }
         }
         // else{
@@ -252,11 +334,43 @@ return "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.
         //   this.$store.commit('session/clear')
         // }
       }).catch((error) => {
-        l(['/welcomeUser: mounted: catch',error])
+        l(['/welcomeUser: mounted: catch', error])
 
         this.$router.push('/signin')
         this.$store.commit('session/clear')
         this.$store.commit('loggedUser/clear')
+      })
+    } else {
+      l(['/welcomeUser: mounted: token is not defined'])
+      this.$router.push('/signin')
+
+    }
+    l(['/getUserAccounts: mounted', this.$store])
+    if (this.$store.state.session.token) {
+      l(['/welcomeUser: mounted: token is defined'])
+      await this.$axios.post('/authed', { token: this.$store.state.session.token }, {
+        headers: {
+          'Access-Control-Allow-Origin': 'http://localhost:4001/welcomeUser',
+          'Authorization': `Bearer ${this.$store.state.session.token}`
+        }
+      }).then((response) => {
+        if (response.statusText === 'OK') {
+          l(['/getUserAccounts: mounted: authed', response])
+          if (response.data._id) {
+            // this.$store.commit('session/save', { userId: response.data._id, token: response.data.token })
+            this.$store.commit('session/saveAcounts', response.data)
+          }
+        }
+        // else{
+        //   this.$router.push('/signin')
+        //   this.$store.commit('session/clear')
+        // }
+      }).catch((error) => {
+        l(['/getUserAccounts: mounted: catch', error])
+
+        // this.$router.push('/signin')
+        // this.$store.commit('session/clear')
+        // this.$store.commit('loggedUser/clear')
       })
     } else {
       l(['/welcomeUser: mounted: token is not defined'])
