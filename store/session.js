@@ -1,5 +1,25 @@
 export const state = () => ({
+  userId: null,
+  token: null,
+  authedUser:{
+    _id:null,
+    email:null,
+    firstName:null,
+    lastName:null,
+    activated:null,
+    loggedOut:null,
+    isAdmin:null,
+    token:null,
+    accounts:[
+      {
+        _id: null,
+        email:null,
+        balance: null
 
+      }
+    ]
+  },
+  accounts:[]
 })
 
 export const mutations = {
@@ -11,11 +31,11 @@ export const mutations = {
     state.token = token
   },
   saveAuthedUser(state,data){
-    state.authedUser = {...data}
+    state.authedUser = {accounts:[],...data}
   },
-  saveAuthedUser(state,data){
-    state.authedUser.accounts = []
-    state.authedUser.accounts.push(data)
+  saveAccounts(state,data){
+    // if(state.authedUser.accounts?.length===0){state.authedUser.accounts=[]}
+    state.accounts=[...data]
 
   },
 

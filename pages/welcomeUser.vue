@@ -217,16 +217,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr
+              <tr v-for='accout in getAccouts' :key='accout._id'
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                  Apple MacBook Pro 17"
+                  {{accout._id}}
                 </th>
                 <td class="px-6 py-4">
-                  Sliver
+                  {{accout.approved}}
                 </td>
                 <td class="px-6 py-4">
-                  Laptop
+                  {{accout.balance}}
                 </td>
                 <!-- <td class="px-6 py-4">
                   $2999
@@ -235,41 +235,7 @@
                   <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
               </tr>
-              <tr
-                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                  Microsoft Surface Pro
-                </th>
-                <td class="px-6 py-4">
-                  White
-                </td>
-                <td class="px-6 py-4">
-                  Laptop PC
-                </td>
-                <!-- <td class="px-6 py-4">
-                  $1999
-                </td> -->
-                <td class="px-6 py-4 text-right">
-                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-              </tr>
-              <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                  Magic Mouse 2
-                </th>
-                <td class="px-6 py-4">
-                  Black
-                </td>
-                <td class="px-6 py-4">
-                  Accessories
-                </td>
-                <!-- <td class="px-6 py-4">
-                  $99
-                </td> -->
-                <td class="px-6 py-4 text-right">
-                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-              </tr>
+
             </tbody>
           </table>
         </div>
@@ -292,6 +258,11 @@ function l (a) {
 }
 export default {
   computed: {
+    getAccounts(){
+ if (!!this.$store.state.session.authedUser.accounts) {
+        return this.$store.state.session.authedUser.accounts
+      }
+    },
     getUser () {
       if (!!this.$store.state.session.authedUser) {
         return this.$store.state.session.authedUser
@@ -348,7 +319,7 @@ export default {
     l(['/getUserAccounts: mounted', this.$store])
     if (this.$store.state.session.token) {
       l(['/welcomeUser: mounted: token is defined'])
-      await this.$axios.post('/authed', { token: this.$store.state.session.token }, {
+      await this.$axios.post('/getUserAccounts', { token: this.$store.state.session.token }, {
         headers: {
           'Access-Control-Allow-Origin': 'http://localhost:4001/welcomeUser',
           'Authorization': `Bearer ${this.$store.state.session.token}`
@@ -356,10 +327,10 @@ export default {
       }).then((response) => {
         if (response.statusText === 'OK') {
           l(['/getUserAccounts: mounted: authed', response])
-          if (response.data._id) {
+          // if (response.data) {
             // this.$store.commit('session/save', { userId: response.data._id, token: response.data.token })
             this.$store.commit('session/saveAcounts', response.data)
-          }
+          // }
         }
         // else{
         //   this.$router.push('/signin')

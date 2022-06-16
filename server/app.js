@@ -226,7 +226,7 @@ app.post('/getUserAccounts', auth, async (req, res) => {
     }
     let user = await User.findOne({ email })
 
-    let accounts = await User.find({ email })
+    let accounts = await Account.find({ email })
 
     return res.status(201).json({accounts})
   } catch (err) {
