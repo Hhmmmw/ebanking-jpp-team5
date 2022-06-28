@@ -44,7 +44,7 @@ for testing purposes, you may use the following credentials
 
 ```json
 {
-  "users" = [
+  "users" : [
     {
       "email": "a@a.com",
       "password": "a@a.com"
