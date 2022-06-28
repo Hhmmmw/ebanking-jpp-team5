@@ -21,6 +21,23 @@ $ npm run generate
 
 A demo application is requested as a completion requirement for an 'Egypt FWD' related program. it is an online banking account with a money transfer facility.
 
+## Samples
+
+<p align="center">
+  <span>
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker.gif" height="500" />
+  </span>
+  <span>
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(1).gif" height="500" />
+  </span>
+  <span>
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(2).gif" height="500" />
+  </span>
+  <span>
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(3).gif" height="500" />
+  </span>
+</p>
+
 ## Credentials
 
 for testing purposes, you may use the following credentials
