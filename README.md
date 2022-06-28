@@ -25,16 +25,16 @@ A demo application is requested as a completion requirement for an 'Egypt FWD' r
 
 <p align="center">
   <span>
-    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker.gif" height="500" />
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker.gif" height="400" />
   </span>
   <span>
-    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(1).gif" height="500" />
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(1).gif" height="400" />
   </span>
   <span>
-    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(2).gif" height="500" />
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(2).gif" height="400" />
   </span>
   <span>
-    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(3).gif" height="500" />
+    <img src="https://github.com/Hhmmmw/ebanking-jpp-team5/blob/main/ezgif.com-gif-maker%20(3).gif" height="400" />
   </span>
 </p>
 
