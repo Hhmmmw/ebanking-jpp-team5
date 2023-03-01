@@ -52,7 +52,7 @@
     "flatted": "^3.2.5",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.6",
-    "nuxt": "^2.14.5",
+    "nuxt": "^3.2.3",
     "nuxt-log": "^0.1.0",
     "nuxt-logger": "^0.2.0",
     "vue": "^2.6.14",
